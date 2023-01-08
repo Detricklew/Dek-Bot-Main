@@ -1,7 +1,6 @@
 function WordCount(str) { 
   return str.split(" ").length;
 }
-console.log(WordCount("hello world"));
 const fs = require('node:fs');
 const path = require('node:path');
 var log = require("./Load_discord.js");
@@ -117,9 +116,6 @@ client.on("messageReactionRemoveAll", (message, reactions) =>{
 
 client.on("messageReactionAdd", async (MessageReaction, user) => {
   Log_Reaction(user.id, MessageReaction);
-  console.log(user.id);
-  console.log(MessageReaction.emoji.name);
-  console.log(MessageReaction.message.id);
 });
 
 client.on("channelDelete", (channel) =>{
