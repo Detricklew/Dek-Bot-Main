@@ -94,9 +94,6 @@ client.once(Events.ClientReady, (c) => {
 client.on("messageCreate", async (message) => {
   Log_message(message);
   check_responses(message);
-  const test = message.content.split(" ");
-  console.log(WordCount(message.content));
-  console.log(test);
 });
 
 client.on("messageDelete", async (message) =>{
