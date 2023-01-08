@@ -597,12 +597,14 @@ module.exports = {
                     return;
                   }
                   interaction.editReply("GONE REDUCED TO ATOMS 😱");
+                  return;
                 }
               );
             }
             interaction.editReply(
               "cant find the response you wanted to delete 🫠"
             );
+            return;
           }
         );
       }
