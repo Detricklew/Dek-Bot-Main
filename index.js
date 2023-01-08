@@ -67,7 +67,7 @@ client.once(Events.ClientReady, (c) => {
         log_channel(channel);
         if (channel.type == "0") {
           channel.messages
-          .fetch({ limit:1 })
+          .fetch()
           .then(message =>{
             message.forEach(message =>{
               Log_message(message);
@@ -83,7 +83,6 @@ client.once(Events.ClientReady, (c) => {
               })
             })
           })
-          log.Load_Messages(channel);
         }
       });
     });
